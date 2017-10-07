@@ -45,16 +45,20 @@ $(document).ready(function(){
 // $("#box14").attr("name", "14");
 // $("#box15").attr("name", "15");
 // $("#box16").attr("name", "16");
-var shuffled=function(){
+var images = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
+images = Shuffle(images);
 
+
+var shuffled=function(){
   for(var i=1; i<=8; i++){
-    $(".ln[name=$(i+1)]").attr('card', shuffled(i))
+    $(".ln[name=$(i+1)]").attr('data-card', images[i])
   }
 }
+
 for(var i=1; i<=16; i++){
-  $(`#box${i}`).attr("name", `${i}`);
-  $
+  $(`#box${i}`).attr("data-card", images[i]);
 }
+
 function Shuffle(o) {
 for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
 return o;
@@ -67,12 +71,15 @@ return o;
 // }
 // $(`.ln[name="1"]`).css('background-image', "url('pic1.jpg')");
 // set click event to make sure we have access to the boxes
-var clicks= $(".ln").on("click", function(){
-$(this).css('background-image', `url('pic1.jpg')`);
+var clicks= $(".ln").on("click", function(e){
+  var imageNumber = $(e.target).attr('data-card');
+  $(this).css('background-image', `url('pic${imageNumber}.jpg')`);
+
   // // var cards;
   // var box=this.setAttribute(images.cardImage);
   // $(this).css('background-image', ``);
 });
+
 
 
 
