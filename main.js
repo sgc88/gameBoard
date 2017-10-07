@@ -36,6 +36,9 @@ var clicks= $(".ln").on("click", function(e){
   var imageNumber = $(e.target).attr('data-card');
   $(this).css('background-image', `url('pic${imageNumber}.jpg')`);
 
+  $("#resetBoard").on("onclick", function(){
+      $(".ln").css(`background`, ``);
+  });
 
 
 });
