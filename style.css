@@ -1,0 +1,42 @@
+.ln{
+width:100px;
+height:100px;
+background-color: red;
+display:inline-block;
+border: 2px solid black;
+
+}
+header{
+
+  widht:100%;
+  height: 400px;
+
+}
+header h1{
+  text-align: center;
+  background-color:green;
+  height:20px;
+  padding-left: 400px;
+  padding-bottom: 200px;
+  margin: 10px aut0;
+
+}
+
+#user{
+  float:left;
+  margin: 20 auto;
+  padding:50px;
+
+}
+
+#score{
+  float:right;
+  margin: 20 px auto;
+  padding: 50px;
+
+}
+main{
+
+  width: 100%;
+  height: 600px;
+}
